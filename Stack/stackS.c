@@ -17,6 +17,7 @@ void push(int data)
         printf("___Data insertion successful!\n");
     }
 }
+
 void pop()
 {
     if(top==-1){
@@ -27,6 +28,7 @@ void pop()
         top--;
     }   
 }
+
 void peek()
 {
     printf("___Peek position: %d\n", top);
@@ -36,6 +38,7 @@ void peek()
     else
     printf("___Peek value: %d\n", stack[top]);
 }
+
 void printStack()
 {
     if(top==-1){

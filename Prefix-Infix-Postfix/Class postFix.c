@@ -4,6 +4,7 @@ int top=-1;
 int stack[100], n;
 
 void push(int val)
+
 {
     if(top==n-1)
     {
@@ -14,6 +15,7 @@ void push(int val)
         stack[top] = val;
     }
 }
+
 int pop()
 {
      int value;
@@ -27,7 +29,8 @@ int pop()
     }
     return value;
 }
-int tra(char ch)
+
+int translate(char ch)
 {
     int value,v;
     value = ch;
@@ -42,7 +45,6 @@ int isOperand(char ch)
     }
     else return -1;
 }
-
 
 int main()
 {
@@ -60,7 +62,7 @@ int main()
     {
         if(isOperand(c[i])==1)
         {
-            push(tra(c[i]));
+            push(translate(c[i]));
         }
         else{
             v1=pop();
